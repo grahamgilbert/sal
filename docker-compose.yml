@@ -34,4 +34,4 @@ services:
     # ports:
     #   - "5432:5432"
   tests:
-    build: .
+    image: python:2.7

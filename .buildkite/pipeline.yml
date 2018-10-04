@@ -10,5 +10,6 @@ steps:
     plugins:
       docker-compose#v2.1.0:
         run: tests
+  - wait
   - name: ":face_with_monocle:"
     command: docker system prune -f
