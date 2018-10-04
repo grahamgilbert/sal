@@ -8,6 +8,7 @@ steps:
     plugins:
       docker#v1.4.0:
         image: "python:2.7"
+
   - name: ":python: flake8"
     command:
       - "pip install flake8"
@@ -15,6 +16,6 @@ steps:
     plugins:
       docker#v1.4.0:
         image: "python:2.7"
-  - wait
+
   - name: ":face_with_monocle:"
     command: docker system prune -f
