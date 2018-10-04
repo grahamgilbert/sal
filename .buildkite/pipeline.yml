@@ -1,5 +1,5 @@
 steps:
-  - name: ":python: Tests and migrations"
+  - name: ":python: Tests and migrations [public]"
     command:
       - "pip install -r setup/requirements.txt"
       - "cp sal/example_settings.py sal/settings.py"
@@ -9,7 +9,7 @@ steps:
       docker#v1.4.0:
         image: "python:2.7"
 
-  - name: ":python: flake8"
+  - name: ":python: flake8 [public]"
     command:
       - "pip install flake8"
       - "flake8"
@@ -17,7 +17,7 @@ steps:
       docker#v1.4.0:
         image: "python:2.7"
 
-  - name: ":face_with_monocle:"
+  - name: ":face_with_monocle: [public]"
     command: docker system prune -f
   - name: "Break it"
     command: exit 1
