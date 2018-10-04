@@ -3,3 +3,8 @@ steps:
     command: echo "Hello!"
     agents:
       - "queue=linux"
+  - name: "Docker Test %n"
+    command: pip install flake8
+    plugins:
+      docker-compose#v2.1.0:
+        run: app
