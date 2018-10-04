@@ -33,3 +33,5 @@ services:
       - DB_PASS=password
     # ports:
     #   - "5432:5432"
+  tests:
+    build: .
