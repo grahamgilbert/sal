@@ -2,11 +2,11 @@ steps:
   - label: Example Test
     command: echo "Hello!"
   - name: ":python: Tests and migrations"
-    - command:
-      - "pip install flake8"
-      - "cp sal/example_settings.py sal/settings.py"
-      - "python manage.py test"
-      - "python manage.py migrate"
+  - command:
+    - "pip install flake8"
+    - "cp sal/example_settings.py sal/settings.py"
+    - "python manage.py test"
+    - "python manage.py migrate"
     plugins:
       docker-compose#v2.1.0:
         run: tests
