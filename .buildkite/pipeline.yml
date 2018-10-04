@@ -19,3 +19,5 @@ steps:
 
   - name: ":face_with_monocle:"
     command: docker system prune -f
+  - name: "Break it"
+    command: exit 1
