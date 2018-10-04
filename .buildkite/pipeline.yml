@@ -8,8 +8,8 @@ steps:
       - "python manage.py test"
       - "python manage.py migrate"
     plugins:
-      docker-compose#v2.5.1:
-        run: tests
+      docker#v1.4.0:
+        image: "python:2.7"
   - wait
   - name: ":face_with_monocle:"
     command: docker system prune -f
